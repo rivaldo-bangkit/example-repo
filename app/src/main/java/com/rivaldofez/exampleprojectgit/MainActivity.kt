@@ -51,6 +51,6 @@ fun Salam(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     ExampleProjectGitTheme {
-        Greeting("Android")
+        Salam("Android")
     }
 }
