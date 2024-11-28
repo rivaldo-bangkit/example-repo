@@ -23,12 +23,12 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val random = Random.nextInt(0, 100)
                     if(random > 50)  {
-                        Greeting(
+                        Salam(
                             name = "Hello World!",
                             modifier = Modifier.padding(innerPadding)
                         )
                     } else {
-                        Greeting(
+                        Salam(
                             name = "Hello World+",
                             modifier = Modifier.padding(innerPadding)
                         )
@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Salam(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
