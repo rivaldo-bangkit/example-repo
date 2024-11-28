@@ -20,8 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             ExampleProjectGitTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Hello World!",
+                    Salam(
+                        name = "Selamat Malam Dunia!",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Salam(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -42,6 +42,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     ExampleProjectGitTheme {
-        Greeting("Android")
+        Salam("Android")
     }
 }
