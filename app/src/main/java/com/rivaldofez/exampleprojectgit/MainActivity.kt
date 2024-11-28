@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.rivaldofez.exampleprojectgit.ui.theme.ExampleProjectGitTheme
+import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,10 +21,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             ExampleProjectGitTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Hello World!",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    val random = Random.nextInt(0, 100)
+                    if(random > 50)  {
+                        Greeting(
+                            name = "Hello World!",
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    } else {
+                        Greeting(
+                            name = "Hello World+",
+                            modifier = Modifier.padding(innerPadding)
+                        )
+                    }
                 }
             }
         }
